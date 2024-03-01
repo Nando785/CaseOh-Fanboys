@@ -18,6 +18,15 @@ function App() {
           Learn React
         </a>
       </header>
+      
+      <head> // future title card
+        <style>
+          
+        </style>
+      </head>
+      <body>
+
+      </body>
     </div>
   );
 }

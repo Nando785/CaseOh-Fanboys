@@ -14,7 +14,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f4f7fa;
+  /* Color Palette: 
+     - Title card/navbar: #3f4d67
+  */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
