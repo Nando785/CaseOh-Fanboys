@@ -15,6 +15,9 @@ def continuous_recording(event, audio_queue: list):
 def process_audio(event, audio_queue: list):
     while True:
         if audio_queue:
+            
+            # process data here
+            
             print("Processed ", audio_queue.pop(0))
         if event.is_set():
             break
