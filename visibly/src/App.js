@@ -1,47 +1,57 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import React from 'react';
+import{ BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <html>
+    <Router>
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
+
         
         <h1 class="title-header">
           Audio Project
         </h1>
         
         <div class="nav-bar">
-          <a href="#" class="nav-element"> Option 1 </a>
-          <a href="#" class="nav-element"> Option 2 </a>
+          <Link to="/" className="nav-element"> Home </Link>
+          <Link to="/about" className="nav-element"> About Us </Link>
         </div>
 
-        <div class="content">
-
-        </div>
+        <Routes>
+          <Route path="/about" element={<AboutUs/>}/>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
       </div>
-    </html>
+    </Router>
+  );
+}
+
+function Home() {
+  return(
+    <div  className="content">
+        <div className="log">
+
+        </div>
+    </div>
   );
 }
 
 function AboutUs() {
   return (
-    <div>
-      <h2>About us</h2>
-      <p>This is the about us page</p>
+    <div  className="content">
+        <div className="profile">
+          Nando
+        </div>
+        <div className="profile">
+          Guillermo
+        </div>
+        <div className="profile">
+          Elyas
+        </div>
+        <div className="profile">
+          Zander
+        </div>
     </div>
   );
 }
