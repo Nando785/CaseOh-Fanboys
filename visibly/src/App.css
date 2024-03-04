@@ -9,7 +9,7 @@ html{
   width: 100%;
   display: flex;
   top:0;
-  background-color: #3f4d67;
+  background-color: #1D4A77;
   padding: 20px;
   color: white;
   margin:0;
@@ -21,7 +21,7 @@ html{
   top: 0;
   left: 0;
   width: 150px;
-  background-color: #2c3e50;
+  background-color: #005383;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ html{
   text-decoration: none;
   padding: 10px;
   text-align: center;
-  background-color: #2c3e50;
+  background-color: #005383;
   width: 150px;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -43,7 +43,7 @@ html{
 }
 
 .nav-element:hover{
-  background-color: #3a5067;
+  background-color: #045b8e;
 }
 
 .content{
@@ -52,15 +52,14 @@ html{
   flex-wrap:wrap;
   align-items: center;
   height: 100vh;
-  border-style: solid;
-  border-color: black;
+  background: linear-gradient(-45deg,#459fe4,rgb(220, 220, 220));
 }
 
 .profile {
   width:200px;
   height:200px;
   margin:10px;
-  background-color: lightgrey;
+  background-color: #F0EAD6;
   display: flex;
   align-items: center;
   padding:20px;
@@ -69,7 +68,9 @@ html{
 }
 
 .log {
-  width:25vw;
+  opacity:0.2;
+  border-radius: 15px;
+  width:70vw;
   height:40vw;
   background-color: black;
 }
