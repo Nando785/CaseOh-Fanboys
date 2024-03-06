@@ -74,6 +74,18 @@ html{
   height:40vw;
   background-color: black;
 }
+
+.chat-bubble {
+  max-width: 80%;
+  background-color: #e1e1e1;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+
+  display:flex;
+  align-items: flex-end;
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
