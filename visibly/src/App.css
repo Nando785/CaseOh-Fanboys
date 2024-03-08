@@ -73,6 +73,8 @@ html{
   width:70vw;
   height:40vw;
   background-color: black;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .chat-bubble {
@@ -82,9 +84,6 @@ html{
   margin: 10px;
   border-radius: 10px;
   word-wrap: break-word;
-
-  display:flex;
-  align-items: flex-end;
 }
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
