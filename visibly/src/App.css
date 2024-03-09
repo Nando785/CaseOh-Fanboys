@@ -48,8 +48,9 @@ html{
 
 .content{
   display: flex;
-  justify-content: center;
-  flex-wrap:wrap;
+  justify-content: space-evenly;
+  margin-left: 10%;
+  flex-direction: row;
   align-items: center;
   height: 100vh;
   background: linear-gradient(-45deg,#459fe4,rgb(220, 220, 220));
@@ -67,8 +68,9 @@ html{
   border-color: black;
 }
 
-.log {
-  opacity:0.2;
+#log {
+  opacity:0.35;
+  
   border-radius: 15px;
   width:70vw;
   height:35vw;
@@ -79,6 +81,7 @@ html{
 
 .chat-bubble {
   max-width: 80%;
+  opacity: 1;
   background-color: #e1e1e1;
   padding: 10px;
   margin: 10px;
@@ -86,8 +89,13 @@ html{
   word-wrap: break-word;
 }
 
-.start-button {
-  background: black;
+.button {
+  background: #045b8e;
+  font-family: 'Franklin Gothic Medium';
+  padding: 10px;
+  background-color: 005383;
+  border-radius: 10px;
+  color: white;
 }
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
