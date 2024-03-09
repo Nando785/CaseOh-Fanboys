@@ -49,6 +49,12 @@ function Home() {
 
   return(
     <div  className="content">
+        <div class="start-button">
+          <form action="python.php" method="post">
+            <button type="submit" class="button"> Start Recording</button>
+          </form>
+        </div>
+
         <div className="log">
             {/* Mapping through chat messages and displaying chat bubbles*/}
             {chatMessages.map((message, index) => (

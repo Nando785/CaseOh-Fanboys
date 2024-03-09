@@ -85,6 +85,10 @@ html{
   border-radius: 10px;
   word-wrap: break-word;
 }
+
+.start-button {
+  background: black;
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
