@@ -7,10 +7,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1 class="title-header">Audio Project</h1>
+        <h1 className="title-header">Audio Project</h1>
         
         {/* Vertical bar on right side, "Home" and "About us section" */}
-        <div class="nav-bar">
+        <div className="nav-bar">
           <Link to="/" className="nav-element"> Home </Link>
           <Link to="/about" className="nav-element"> About Us </Link>
         </div>
@@ -30,9 +30,15 @@ function Home() {
   const [chatMessages, setChatMessages] = useState([]);
 
   //Simulating data returned by Python script
-  const simulateBackendResponse = () => {
-    const newMessage = "This is a message from the script";
-    setChatMessages(prevMessages => [...prevMessages, newMessage]);
+  const simulateBackendResponse = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/get_message');
+      const data = await response.json();
+      const newMessage = data.message;
+      setChatMessages(prevMessages => [...prevMessages, newMessage]);
+    } catch (error) {
+      console.error('Error fetching message from server:', error);
+    }
   };
 
   //Effect to simulate backend response when the component mounts
@@ -56,10 +62,8 @@ function Home() {
             ))}
         </div>
 
-                <div class="start-button">
-          <form action="python.php" method="post">
-            <button type="submit" class="button"> Start Recording</button>
-          </form>
+        <div className="start-button">
+          <button type="submit" className="button"> Start Recording</button>
         </div>
     </div>
   );
